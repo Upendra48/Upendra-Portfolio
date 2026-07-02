@@ -1,6 +1,12 @@
 import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Github, ExternalLink } from "lucide-react";
+import pailaImage from "../assets/images/paila.png";
+import anugamanImage from "../assets/images/anugaman.png";
+import sankalanImage from "../assets/images/sankalan.png";
+import signLanguageGloveImage from "../assets/images/sign_glove.jpg";
+import emergencyResponseImage from "../assets/images/response_system.jpg";
+import voterDataScraperImage from "../assets/images/voter_data_scraper.png";
 
 interface Project {
   id: number;
@@ -27,10 +33,10 @@ const projects: Project[] = [
       "REST API",
       "Github Actions",
     ],
-    image: null,
+    image: sankalanImage,
     video: null,
     github: "https://github.com/Upendra48/Sankalan",
-    live: null,
+    live: "https://sankalan-zeta.vercel.app/",
   },
 
   {
@@ -46,7 +52,7 @@ const projects: Project[] = [
       "REST API",
       "Github Actions",
     ],
-    image: null,
+    image: anugamanImage,
     video: null,
     github: "https://github.com/Upendra48/Anugaman",
     live: null,
@@ -66,9 +72,9 @@ const projects: Project[] = [
       "Socket.io",
       "Team Project",
     ],
-    image: null,
+    image: pailaImage,
     video: null,
-    github: "https://github.com/saugat1070/Team-USA",
+    github: "https://github.com/Upendra48/Team-USA-Paila-",
     live: null,
   },
   {
@@ -84,7 +90,7 @@ const projects: Project[] = [
       "Pandas",
       "Team Project",
     ],
-    image: null,
+    image: signLanguageGloveImage,
     video: null,
     github: "https://github.com/Upendra48/SignLanguage_Glove",
     live: null,
@@ -104,7 +110,7 @@ const projects: Project[] = [
       "Wifi Library",
       "Team Project",
     ],
-    image: null,
+    image: emergencyResponseImage,
     video: null,
     github: "https://github.com/Sanjog34/Emergency_Response_System",
     live: null,
@@ -115,7 +121,7 @@ const projects: Project[] = [
     description:
       "A scraper that collects publicly available voter records from the Election Commission of Nepal using ETL pipeline to exports them as clean CSV files.",
     stack: ["Python", "BeautifulSoup", "Pandas", "PyMuPDF", "ETL Pipeline"],
-    image: null,
+    image: voterDataScraperImage,
     video: null,
     github:
       "https://github.com/Upendra48/Nepal-Election-Commission-Voter-Data-Scraper",
@@ -299,13 +305,13 @@ const Showcase: React.FC = () => {
               <div className="relative w-full max-w-[500px]">
                 <div className="absolute -inset-3 border border-moonstone/20 rounded-2xl" />
                 <div className="relative z-10 w-full rounded-xl overflow-hidden shadow-2xl bg-zinc-900/20 backdrop-blur-3xl border border-white/5">
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center overflow-hidden bg-zinc-900/50 aspect-[4/3]">
                     {item.video ? (
                       <video
                         controls
                         playsInline
                         poster={item.image ?? undefined}
-                        className="w-full h-auto block object-cover bg-zinc-900"
+                        className="w-full h-full object-contain object-center block bg-zinc-900"
                       >
                         <source src={item.video} type="video/mp4" />
                         Your browser does not support the video tag.
@@ -314,10 +320,10 @@ const Showcase: React.FC = () => {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-auto block"
+                        className="w-full h-full object-contain object-center block"
                       />
                     ) : (
-                      <div className="w-full h-64 bg-neutral-900/50 flex items-center justify-center">
+                      <div className="w-full h-full flex items-center justify-center">
                         <span className="text-white/5 text-[10px] tracking-widest uppercase">
                           No Preview Available
                         </span>
@@ -396,23 +402,25 @@ const Showcase: React.FC = () => {
                 <div className="relative w-full min-w-0 max-w-full mx-auto">
                   <div className="absolute -inset-1.5 sm:-inset-2 border border-moonstone/10 rounded-xl pointer-events-none" />
                   <div className="relative z-10 w-full rounded-lg overflow-hidden shadow-xl bg-zinc-900/20 backdrop-blur-3xl border border-white/5">
-                    {item.video ? (
-                      <video
-                        controls
-                        playsInline
-                        poster={item.image ?? undefined}
-                        className="w-full h-auto max-w-full block object-contain bg-zinc-900"
-                      >
-                        <source src={item.video} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    ) : (
-                      <img
-                        src={item.image ?? undefined}
-                        alt={item.name}
-                        className="w-full h-auto max-w-full block object-contain"
-                      />
-                    )}
+                    <div className="flex items-center justify-center overflow-hidden bg-zinc-900/50 aspect-[4/3]">
+                      {item.video ? (
+                        <video
+                          controls
+                          playsInline
+                          poster={item.image ?? undefined}
+                          className="w-full h-full object-contain object-center block bg-zinc-900"
+                        >
+                          <source src={item.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <img
+                          src={item.image ?? undefined}
+                          alt={item.name}
+                          className="w-full h-full object-contain object-center block"
+                        />
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
