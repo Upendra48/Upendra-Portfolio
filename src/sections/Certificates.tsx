@@ -11,24 +11,16 @@ interface CertificateItem {
 
 const certificates: CertificateItem[] = [
   {
-    title: "Code with Coffee Junior",
-    issuer: "TechParva 2.0",
+    title: "Problem Solving (Intermediate)",
+    issuer: "HackerRank",
     year: "2024",
+    link: "https://www.linkedin.com/in/upendra48/overlay/Certifications/1502283306/treasury/?profileId=ACoAADvYNR0B51zVR41rEEPw_029yUAnO5jrIkc",
   },
   {
-    title: "OSM Hackfest Winner",
-    issuer: "Geomatics Association of Nepal",
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
     year: "2024",
-  },
-  {
-    title: "Flutter Training Mentor",
-    issuer: "Community Training Program",
-    year: "2025",
-  },
-  {
-    title: "AI Bootcamp Completion",
-    issuer: "Bootcamp Program",
-    year: "2025",
+    link: "https://www.linkedin.com/in/upendra48/overlay/Certifications/607784059/treasury/?profileId=ACoAADvYNR0B51zVR41rEEPw_029yUAnO5jrIkc",
   },
 ];
 
@@ -77,7 +69,7 @@ const Certificates: React.FC = () => {
           <div className="flex items-center gap-3 mb-6">
             <Award className="text-moonstone" size={22} />
             <h3 className="text-xl sm:text-2xl font-semibold text-white">
-              Certificates & Recognitions
+              Certifications
             </h3>
           </div>
 
@@ -151,7 +143,8 @@ const Certificates: React.FC = () => {
 
             <div className="mt-3 flex flex-wrap gap-2">
               <div className="rounded-full border border-moonstone/20 bg-moonstone-dim/70 px-2.5 py-1.5 text-xs text-moonstone">
-                Rating: <span className="ml-1 font-semibold text-white">1744</span>
+                Rating:{" "}
+                <span className="ml-1 font-semibold text-white">1744</span>
               </div>
             </div>
 
