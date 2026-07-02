@@ -8,19 +8,27 @@ interface Project {
   description: string;
   stack: string[];
   image: string | null;
+  video: string | null;
   github: string | null;
   live: string | null;
 }
 
 const projects: Project[] = [
- 
   {
     id: 1,
     name: "Sankalan",
     description:
       "An efficient full-stack system waste management system designed to help municipalities efficiently monitor waste bins, optimize collection routes, and enable citizens to report waste-related issues in real time.",
-    stack: ["Django", "Flutter", "PostreSQL", "Docker", "REST API", "Github Actions"],
+    stack: [
+      "Django",
+      "Flutter",
+      "PostreSQL",
+      "Docker",
+      "REST API",
+      "Github Actions",
+    ],
     image: null,
+    video: null,
     github: "https://github.com/Upendra48/Sankalan",
     live: null,
   },
@@ -28,20 +36,38 @@ const projects: Project[] = [
   {
     id: 2,
     name: "Anugaman",
-    description:"A job application tracking backend system where users can manage and track their job applications using a modern Kanban-style workflow.",
-    stack: ["Django", "MongoDB", "Redis", "Docker", "REST API", "Github Actions"],
+    description:
+      "A job application tracking backend system where users can manage and track their job applications using a modern Kanban-style workflow.",
+    stack: [
+      "Django",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "REST API",
+      "Github Actions",
+    ],
     image: null,
+    video: null,
     github: "https://github.com/Upendra48/Anugaman",
     live: null,
   },
 
-   {
+  {
     id: 3,
     name: "Paila",
     description:
       "A location-powered community fitness platform (Mobile App) that turns walking and running into a shared game. Users are automatically placed into live, district-based rooms using real-time coordinates, where they can track activity together, compete locally, and build territory through valid walking or running routes.",
-    stack: ["Flutter", "Nodejs", "Express", "MongoDB", "Redis", "Socket.io", "Team Project"],
+    stack: [
+      "Flutter",
+      "Nodejs",
+      "Express",
+      "MongoDB",
+      "Redis",
+      "Socket.io",
+      "Team Project",
+    ],
     image: null,
+    video: null,
     github: "https://github.com/saugat1070/Team-USA",
     live: null,
   },
@@ -50,8 +76,16 @@ const projects: Project[] = [
     name: "Sign Language Glove",
     description:
       "A wearable sign-language recognition system  that translates Nepali Sign Language (NSL) gestures into spoken audio in real time using ESP32, Flex sensors, MPU-6050(gyroscope/accelerometer) to capture the hand gestures and Random Forest and LSTM to predict the gestures.",
-    stack: ["Python", "Jupyter Notebook", "Arduino","Scikit-learn","Pandas", "Team Project"],
+    stack: [
+      "Python",
+      "Jupyter Notebook",
+      "Arduino",
+      "Scikit-learn",
+      "Pandas",
+      "Team Project",
+    ],
     image: null,
+    video: null,
     github: "https://github.com/Upendra48/SignLanguage_Glove",
     live: null,
   },
@@ -59,9 +93,19 @@ const projects: Project[] = [
   {
     id: 5,
     name: "Emergency Response System for Women's Safety",
-    description:"Built an IoT-powered wearable emergency response device that instantly sends GPS-based SOS alerts via SMS using ESP32, GPS, and GSM modules. The system features a web-based configuration portal, LCD feedback, and continuous live location updates for enhanced personal safety.",
-    stack: ["C++", "TinyGPS++", "ESP32", "NEO-6M GPS","SIM800L GSM","Wifi Library","Team Project"],
+    description:
+      "Built an IoT-powered wearable emergency response device that instantly sends GPS-based SOS alerts via SMS using ESP32, GPS, and GSM modules. The system features a web-based configuration portal, LCD feedback, and continuous live location updates for enhanced personal safety.",
+    stack: [
+      "C++",
+      "TinyGPS++",
+      "ESP32",
+      "NEO-6M GPS",
+      "SIM800L GSM",
+      "Wifi Library",
+      "Team Project",
+    ],
     image: null,
+    video: null,
     github: "https://github.com/Sanjog34/Emergency_Response_System",
     live: null,
   },
@@ -72,11 +116,11 @@ const projects: Project[] = [
       "A scraper that collects publicly available voter records from the Election Commission of Nepal using ETL pipeline to exports them as clean CSV files.",
     stack: ["Python", "BeautifulSoup", "Pandas", "PyMuPDF", "ETL Pipeline"],
     image: null,
+    video: null,
     github:
       "https://github.com/Upendra48/Nepal-Election-Commission-Voter-Data-Scraper",
     live: null,
   },
-
 ];
 
 const Showcase: React.FC = () => {
@@ -254,50 +298,63 @@ const Showcase: React.FC = () => {
             >
               <div className="relative w-full max-w-[500px]">
                 <div className="absolute -inset-3 border border-moonstone/20 rounded-2xl" />
-                <div className="relative z-10 w-full rounded-xl overflow-hidden shadow-2xl bg-zinc-900/20 backdrop-blur-3xl border border-white/5 flex items-center justify-center">
-                  {item.image ? (
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-auto block"
-                    />
-                  ) : (
-                    <div className="w-full h-64 bg-neutral-900/50 flex items-center justify-center">
-                      <span className="text-white/5 text-[10px] tracking-widest uppercase">
-                        No Preview Available
-                      </span>
-                    </div>
-                  )}
-
-                  {/* Desktop Hover Overlay */}
-                  <div className="absolute inset-0 z-30 flex items-center justify-center gap-3 bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]">
-                    {item.github !== null && (
-                      <a
-                        href={item.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md transform translate-y-2 hover:translate-y-0 transition-transform duration-300"
+                <div className="relative z-10 w-full rounded-xl overflow-hidden shadow-2xl bg-zinc-900/20 backdrop-blur-3xl border border-white/5">
+                  <div className="flex items-center justify-center">
+                    {item.video ? (
+                      <video
+                        controls
+                        playsInline
+                        poster={item.image ?? undefined}
+                        className="w-full h-auto block object-cover bg-zinc-900"
                       >
-                        <Github size={18} className="text-white" />
-                        <span className="text-[10px] font-bold text-white tracking-[0.2em] uppercase">
-                          GitHub
+                        <source src={item.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : item.image ? (
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-auto block"
+                      />
+                    ) : (
+                      <div className="w-full h-64 bg-neutral-900/50 flex items-center justify-center">
+                        <span className="text-white/5 text-[10px] tracking-widest uppercase">
+                          No Preview Available
                         </span>
-                      </a>
-                    )}
-                    {item.live !== null && (
-                      <a
-                        href={item.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md transform translate-y-2 hover:translate-y-0 transition-transform duration-300"
-                      >
-                        <ExternalLink size={18} className="text-white" />
-                        <span className="text-[10px] font-bold text-white tracking-[0.2em] uppercase">
-                          Live
-                        </span>
-                      </a>
+                      </div>
                     )}
                   </div>
+
+                  {(item.github !== null || item.live !== null) && (
+                    <div className="flex flex-wrap justify-center gap-2 border-t border-white/10 bg-black/20 px-4 py-3">
+                      {item.github !== null && (
+                        <a
+                          href={item.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-white/80 hover:text-white hover:bg-white/15 transition-colors duration-300"
+                        >
+                          <Github size={16} aria-hidden="true" />
+                          <span className="text-[10px] font-bold tracking-[0.2em] uppercase">
+                            GitHub
+                          </span>
+                        </a>
+                      )}
+                      {item.live !== null && (
+                        <a
+                          href={item.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-white/80 hover:text-white hover:bg-white/15 transition-colors duration-300"
+                        >
+                          <ExternalLink size={16} aria-hidden="true" />
+                          <span className="text-[10px] font-bold tracking-[0.2em] uppercase">
+                            Live
+                          </span>
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -335,15 +392,27 @@ const Showcase: React.FC = () => {
                 </h3>
               </div>
 
-              {item.image !== null && (
+              {(item.image !== null || item.video !== null) && (
                 <div className="relative w-full min-w-0 max-w-full mx-auto">
                   <div className="absolute -inset-1.5 sm:-inset-2 border border-moonstone/10 rounded-xl pointer-events-none" />
                   <div className="relative z-10 w-full rounded-lg overflow-hidden shadow-xl bg-zinc-900/20 backdrop-blur-3xl border border-white/5">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-auto max-w-full block object-contain"
-                    />
+                    {item.video ? (
+                      <video
+                        controls
+                        playsInline
+                        poster={item.image ?? undefined}
+                        className="w-full h-auto max-w-full block object-contain bg-zinc-900"
+                      >
+                        <source src={item.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <img
+                        src={item.image ?? undefined}
+                        alt={item.name}
+                        className="w-full h-auto max-w-full block object-contain"
+                      />
+                    )}
                   </div>
                 </div>
               )}
