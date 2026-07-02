@@ -101,7 +101,7 @@ const About: React.FC = () => {
           variants={revealVariants}
           className="w-full md:w-3/5 space-y-5 sm:space-y-6 lg:space-y-8 min-w-0"
         >
-          <p className="text-base sm:text-lg lg:text-xl text-white leading-relaxed break-words">
+          <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed break-words">
             I'm{" "}
             <span className="text-moonstone font-semibold">
               Upendra Raj Joshi
@@ -110,12 +110,12 @@ const About: React.FC = () => {
             problems by building scalable web applications and RESTful APIs with
             Django and Python.
           </p>
-          <p className="text-base sm:text-lg lg:text-xl text-white leading-relaxed break-words">
+          <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed break-words">
             I enjoy breaking down complex challenges into clean, reliable
             solutions, from API design and database modeling to system
             integrations, performance optimization, and deployment workflows.
           </p>
-          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/90 break-words">
+          <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-white/90 break-words">
             I hold a{" "}
             <span className="text-moonstone font-semibold">
               Bachelor's degree in Electronics, Communication and Information

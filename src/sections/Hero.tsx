@@ -2,7 +2,6 @@ import React from "react";
 import { motion, type Variants } from "motion/react";
 import { ChevronDown } from "lucide-react";
 
-
 const Hero: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -15,14 +14,14 @@ const Hero: React.FC = () => {
     },
   };
 
-  const itemVariants:Variants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8, ease: 
-          [0.16, 1, 0.3, 1] 
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1],
       },
     },
   };
@@ -40,25 +39,25 @@ const Hero: React.FC = () => {
       >
         <motion.p
           variants={itemVariants}
-
-          className="text-[#aaa] text-sm sm:text-base lg:text-base uppercase tracking-[0.15em] sm:tracking-[0.2em] lg:tracking-[0.2em] mb-3 sm:mb-4 lg:mb-4 font-inter font-medium"
+          className="text-[#aaa] text-sm sm:text-base lg:text-base uppercase tracking-[0.2em] sm:tracking-[0.25em] lg:tracking-[0.25em] mb-3 sm:mb-4 lg:mb-4 font-inter font-medium"
         >
           Hello, this is
         </motion.p>
 
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl mb-4 sm:mb-6 lg:mb-6 font-bold tracking-tight text-white leading-tight lg:leading-none break-words lg:break-normal"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl mb-4 sm:mb-6 lg:mb-6 font-bold tracking-[-0.03em] text-white leading-[0.95] lg:leading-[0.9] break-words lg:break-normal"
         >
           Upendra Raj Joshi
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-white text-base sm:text-xl md:text-2xl font-inter mb-8 sm:mb-12 lg:mb-12 max-w-2xl mx-auto leading-relaxed flex flex-col lg:block items-center lg:items-stretch gap-3 lg:gap-0 px-1 lg:px-0"
+          className="text-white/80 text-base sm:text-xl md:text-2xl font-inter mb-8 sm:mb-12 lg:mb-12 max-w-2xl mx-auto leading-relaxed flex flex-col lg:block items-center lg:items-stretch gap-3 lg:gap-0 px-1 lg:px-0"
         >
-          <span className="opacity-80">
-            Backend-focused developer building APIs and systems with
+          <span>
+            I build backend systems, scalable APIs, and practical software
+            solutions with
           </span>{" "}
           <span
             className="text-moonstone font-mono font-semibold bg-moonstone-dim px-3 py-1 rounded border border-moonstone-border/20 max-lg:mt-1 lg:ml-[0.5em]"
@@ -129,7 +128,7 @@ const Hero: React.FC = () => {
         >
           <a
             href="#works"
-            className="group btn-shine inline-flex items-center justify-center min-h-11 lg:min-h-0 px-6 sm:px-8 lg:px-8 py-3 sm:py-4 lg:py-4 rounded-full border border-moonstone-border text-moonstone font-bold text-base sm:text-lg lg:text-lg bg-transparent hover:bg-white transition-all duration-300"
+            className="group inline-flex items-center justify-center min-h-11 lg:min-h-0 px-6 sm:px-8 lg:px-8 py-3 sm:py-4 lg:py-4 rounded-full border border-moonstone/40 bg-moonstone-dim/70 text-moonstone font-semibold text-base sm:text-lg lg:text-lg shadow-[0_10px_30px_rgba(224,231,255,0.08)] transition-all duration-300 hover:-translate-y-1 hover:bg-moonstone/10"
           >
             View Work
           </a>
@@ -137,7 +136,7 @@ const Hero: React.FC = () => {
             href="https://github.com/Upendra48"
             target="_blank"
             rel="noopener noreferrer"
-            className="group btn-shine inline-flex items-center justify-center min-h-11 lg:min-h-0 px-6 sm:px-8 lg:px-8 py-3 sm:py-4 lg:py-4 rounded-full border border-moonstone-border text-moonstone font-bold text-base sm:text-lg lg:text-lg bg-transparent hover:bg-white transition-all duration-300"
+            className="group inline-flex items-center justify-center min-h-11 lg:min-h-0 px-6 sm:px-8 lg:px-8 py-3 sm:py-4 lg:py-4 rounded-full border border-white/15 bg-white/5 text-white font-semibold text-base sm:text-lg lg:text-lg shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
           >
             View GitHub
           </a>
