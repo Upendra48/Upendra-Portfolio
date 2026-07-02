@@ -19,15 +19,42 @@ const About: React.FC = () => {
   const techStack = [
     {
       category: "Languages",
-      items: ["Python", "Dart", "C/C++", "SQL", "HTML/CSS"],
+      items: ["Python", "SQL", "C/C++", "Dart", "JavaScript", "HTML/CSS"],
     },
-    { category: "Frameworks", items: ["Django REST Framework", "Flutter"] },
     {
-      category: "Developer Tools",
-      items: ["Linux", "Git", "Docker", "Github Actions", "Firebase", "Postman", "Vercel", "Render", "Neon"],
+      category: "Backend",
+      items: [
+        "Django REST Framework",
+        "REST APIs",
+        "Authentication",
+        "WebSockets",
+      ],
     },
-    { category: "Databases", items: ["MySQL","PostgreSQL", "MongoDB", "Redis"] },
+    {
+      category: "Databases & Storage",
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase"],
+    },
+    {
+      category: "Tools & Deployment",
+      items: [
+        "Linux",
+        "Git",
+        "Docker",
+        "GitHub Actions",
+        "Postman",
+        "Vercel",
+        "Render",
+        "Neon",
+      ],
+    },
   ];
+
+const backendHighlights = [
+  "Scalable REST API development",
+  "Database design & query optimization",
+  "Authentication, authorization & security",
+  "Dockerized deployment & CI/CD workflows",
+];
 
   return (
     <section
@@ -83,19 +110,28 @@ const About: React.FC = () => {
             APIs with Django and Python.
           </p>
           <p className="text-base sm:text-lg lg:text-xl text-white leading-relaxed break-words">
+            I enjoy creating reliable server-side systems, from API design and
+            database modeling to integrations and deployment workflows.
+          </p>
+          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/90 break-words">
             I am completing a Bachelor in Electronics, Communication and
             Information Engineering at{" "}
             <span className="text-moonstone font-semibold">
               Pashchimanchal Campus Lamachaur, Pokhara
             </span>
-            , where I sharpened my backend architecture and database design
-            skills.
+            , and I bring a strong systems mindset to debugging, performance,
+            and maintainable backend development.
           </p>
-          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/90 break-words">
-            I focus on clean, efficient code, debugging, and system
-            optimization, with experience building APIs, integrating services,
-            and driving backend performance improvements.
-          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            {backendHighlights.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-moonstone/20 bg-moonstone-dim px-3 py-1.5 text-sm text-moonstone"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </motion.div>
       </div>
 
@@ -108,7 +144,7 @@ const About: React.FC = () => {
         className="glass-card p-6 sm:p-8 lg:p-10 xl:p-16 rounded-2xl sm:rounded-[2rem] min-w-0"
       >
         <h3 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10 lg:mb-12 text-white">
-          How I build things
+          Backend-focused toolkit
         </h3>
         <div className="flex flex-col gap-6 sm:gap-8">
           {techStack.map((stack) => (

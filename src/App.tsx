@@ -7,6 +7,7 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Showcase from "./sections/Showcase";
+import Certificates from "./sections/Certificates";
 import Contact from "./sections/Contact";
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <About />
           <Experience />
           <Showcase />
+          <Certificates />
           <Contact />
 
           <footer className="py-12 text-center opacity-40">
