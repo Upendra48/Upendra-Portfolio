@@ -49,12 +49,12 @@ const About: React.FC = () => {
     },
   ];
 
-const backendHighlights = [
-  "Scalable REST API development",
-  "Database design & query optimization",
-  "Authentication, authorization & security",
-  "Dockerized deployment & CI/CD workflows",
-];
+  const backendHighlights = [
+    "Scalable REST API development",
+    "Database design & query optimization",
+    "Authentication, authorization & security",
+    "Dockerized deployment & CI/CD workflows",
+  ];
 
   return (
     <section
@@ -106,21 +106,28 @@ const backendHighlights = [
             <span className="text-moonstone font-semibold">
               Upendra Raj Joshi
             </span>
-            , a backend-focused developer building web applications and RESTful
-            APIs with Django and Python.
+            , a backend-focused developer passionate about solving real-world
+            problems by building scalable web applications and RESTful APIs with
+            Django and Python.
           </p>
           <p className="text-base sm:text-lg lg:text-xl text-white leading-relaxed break-words">
-            I enjoy creating reliable server-side systems, from API design and
-            database modeling to integrations and deployment workflows.
+            I enjoy breaking down complex challenges into clean, reliable
+            solutions, from API design and database modeling to system
+            integrations, performance optimization, and deployment workflows.
           </p>
           <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/90 break-words">
-            I am completing a Bachelor in Electronics, Communication and
-            Information Engineering at{" "}
+            I hold a{" "}
             <span className="text-moonstone font-semibold">
-              Pashchimanchal Campus Lamachaur, Pokhara
+              Bachelor's degree in Electronics, Communication and Information
+              Engineering
+            </span>{" "}
+            from{" "}
+            <span className="text-moonstone font-semibold">
+              Pashchimanchal Campus, Pokhara
             </span>
-            , and I bring a strong systems mindset to debugging, performance,
-            and maintainable backend development.
+            , where I developed a strong systems mindset that complements my
+            passion for building maintainable, efficient, and impactful
+            software.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             {backendHighlights.map((item) => (
