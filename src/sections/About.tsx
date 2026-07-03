@@ -107,13 +107,13 @@ const About: React.FC = () => {
               Upendra Raj Joshi
             </span>
             , a backend-focused developer passionate about solving real-world
-            problems by building scalable web applications and RESTful APIs with
+            problems by building web applications and RESTful APIs with
             Django and Python.
           </p>
           <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed break-words">
             I enjoy breaking down complex challenges into clean, reliable
             solutions, from API design and database modeling to system
-            integrations, performance optimization, and deployment workflows.
+            integrations and deployment workflows.
           </p>
           <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-white/90 break-words">
             I hold a{" "}

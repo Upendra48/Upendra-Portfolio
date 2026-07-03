@@ -53,7 +53,7 @@ const Certificates: React.FC = () => {
           CERTIFICATES & PROBLEM SOLVING
         </h2>
         <p className="mt-3 max-w-2xl text-sm sm:text-base leading-relaxed text-white/70">
-          A snapshot of my achievements, learning milestones, and consistent
+          A snapshot of my achievements, learning milestones and consistent
           coding practice.
         </p>
       </motion.div>

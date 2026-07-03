@@ -55,7 +55,7 @@ const projects: Project[] = [
     image: anugamanImage,
     video: null,
     github: "https://github.com/Upendra48/Anugaman",
-    live: null,
+    live: "https://anugaman.onrender.com/api/v1/auth/register/",
   },
 
   {
@@ -93,7 +93,7 @@ const projects: Project[] = [
     image: signLanguageGloveImage,
     video: null,
     github: "https://github.com/Upendra48/SignLanguage_Glove",
-    live: null,
+    live: "https://www.linkedin.com/feed/update/urn:li:activity:7474831854471229441/",
   },
 
   {
@@ -113,7 +113,7 @@ const projects: Project[] = [
     image: emergencyResponseImage,
     video: null,
     github: "https://github.com/Sanjog34/Emergency_Response_System",
-    live: null,
+    live: "https://www.linkedin.com/posts/upendra48_%F0%9D%90%84%F0%9D%90%A6%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A0%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%9C%F0%9D%90%B2-%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%A9%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC%F0%9D%90%9E-%F0%9D%90%92%F0%9D%90%B2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A6-ugcPost-7338801026688327680-__up/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADvYNR0B51zVR41rEEPw_029yUAnO5jrIkc",
   },
   {
     id: 6,
