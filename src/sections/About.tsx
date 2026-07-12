@@ -26,25 +26,35 @@ const About: React.FC = () => {
       items: [
         "Django REST Framework",
         "REST APIs",
-        "Authentication",
-        "WebSockets",
+        "Celery",
+        "RabbitMQ",
       ],
     },
     {
       category: "Databases & Storage",
-      items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase"],
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
     },
     {
-      category: "Tools & Deployment",
+      category: "DevOps & Cloud",
       items: [
-        "Linux",
-        "Git",
         "Docker",
+        "Git",
         "GitHub Actions",
-        "Postman",
-        "Vercel",
+        "Linux",
         "Render",
+        "Railway",
         "Neon",
+        "CloudAMQP",
+      ]
+    },
+    {
+      category: "Tools",
+      items: [
+        "Postman",
+        "GitHub",
+        "Firebase",
+        "Grafana & Prometheus (Basic)",
+
       ],
     },
   ];

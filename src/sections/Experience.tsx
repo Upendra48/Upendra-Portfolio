@@ -16,7 +16,7 @@ const journeyData: JourneyEntry[] = [
     id: "schooling",
     year: "2019 - 2021",
     title: "+2 Science",
-    subtitle: "From Aishwarya Vidya Niketan, Dhangadhi",
+    subtitle: "From Aishwarya Vidya Niketan, Dhangadhi (GPA: 3.25)",
     story:
       "During my +2 Science years, I developed a strong foundation in physics, chemistry, and mathematics. I also explored my interest in robotics and electronics through team projects, which sparked my passion for technology and innovation.",
     category: "Education",
@@ -29,7 +29,7 @@ const journeyData: JourneyEntry[] = [
     id: "bachelor",
     year: "May 2022 - May 2026",
     title: "Bachelor of Electronics, Communication and Information Engineering",
-    subtitle: "From Institute of Engineering, Pashchimanchal Campus",
+    subtitle: "From Institute of Engineering, Pashchimanchal Campus (71.37% Approx.)",
     story:
       "I started shaping my path around technology, communication systems, and engineering problem solving. The focus shifted from just learning concepts to applying them in real-world contexts.",
     category: "Education",
