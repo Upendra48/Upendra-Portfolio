@@ -7,6 +7,7 @@ import sankalanImage from "../assets/images/sankalan.png";
 import signLanguageGloveImage from "../assets/images/sign_glove.jpg";
 import emergencyResponseImage from "../assets/images/response_system.jpg";
 import voterDataScraperImage from "../assets/images/voter_data_scraper.png";
+import paymentRetryEngineImage from "../assets/images/payment-retry-engine.png"
 
 interface Project {
   id: number;
@@ -21,6 +22,24 @@ interface Project {
 
 const projects: Project[] = [
   {
+        id: 1,
+    name: "Payment Retry Engine",
+    description:
+"A production-inspired backend system built with Django REST Framework that simulates how modern payment platforms process transactions, prevent duplicate payments, automatically retry failed payments, expose operational metrics, and provide API observability. This project demonstrates backend engineering concepts commonly used in fintech systems, including idempotency, asynchronous task processing, retry strategies, monitoring, scheduling, REST API design, and containerized deployment.",  stack: [
+      "Django REST Framework",
+      "Neon PostreSQL",
+      "Celery",
+      "RabbitMQ",
+      "Prometheus",
+      "Docker",
+    ],
+    image: paymentRetryEngineImage,
+    video: null,
+    github: "https://github.com/Upendra48/payment-retry-engine",
+    live: "https://payment-retry-engine-web.onrender.com/",
+  },
+  {
+
     id: 1,
     name: "Sankalan",
     description:
