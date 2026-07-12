@@ -2,6 +2,8 @@
 
 A polished personal portfolio website built with React, TypeScript, Vite, and Tailwind CSS. This portfolio showcases backend-focused projects, technical experience, certificates, and contact links with smooth animations and responsive navigation.
 
+Live link: https://upendra-portfolio-web.vercel.app/
+
 ## 🚀 Overview
 
 - Modern portfolio site for Upendra Raj Joshi
